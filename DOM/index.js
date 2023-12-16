@@ -1,5 +1,9 @@
 
 // Basics of 4 pillars of DOM
+// 1. Selecting an element
+// 2. Changing the HTMl
+// 3. Changing the CSS
+// 4. Event Listening
 
 var f=0;
 
@@ -31,3 +35,24 @@ h.forEach((e) => {
 
 });
 
+
+let p1 = new Promise(function(res, rej) {
+
+    return res("P1 is reutrned");
+
+})
+
+
+
+// let p2 = p1.then(function (data){
+//     console.log(data);
+
+//     return ( new Promise(function (res,rej){
+//         res("P2 bhi reutrn ho gya")
+//     }))
+
+// })
+
+// p2.then( function(parm){
+//     console.log("parm = ", parm)
+// }  )
