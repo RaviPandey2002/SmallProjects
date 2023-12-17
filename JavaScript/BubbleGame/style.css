@@ -1,0 +1,137 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: "Gilroy"
+}
+
+html,body{
+  width: 100%;
+  height: 100%;
+}
+
+#main{
+    height: 100%;
+    width: 100%;
+    display:flex;/*In order to apply flex properties to the object or container*/
+    justify-content: center;/*For aligning items vertically*/
+    align-items:center;/*For aligning items horizontally*/
+    background-color: rgb(202, 231, 202);
+}
+
+#pannel{
+    height:80%;
+    width:80%;
+    background-color: white;
+    border-radius:13px;
+    /* For keeping round edges */
+    overflow:hidden; 
+}
+
+#ptop{
+    display:flex;
+    justify-content:center;
+    align-content:center;
+    /* justify-content:space-between; */
+    height: 100px;
+    width: 100%;
+    background-color:rgb(102, 148, 130);
+
+    position:relative;/*For Start_Button*/
+
+}
+
+.elem{
+    display:flex;
+    justify-content:center;
+    align-content:center;
+    /* padding: 8px; */
+    margin: 20px 20px;
+    height:40px;
+    width:150px;
+    gap:5px;
+    font-weight:450;
+
+    /* background-color:white; */
+}
+
+h2{
+    font-weight:400;
+    padding:5px;
+}
+
+.box{
+    display:flex;
+    justify-content:center;
+    align-content:center;
+    flex-wrap:wrap;
+    height:100%;
+    width:60px;
+    padding:5px;
+    border-radius:4px;
+    background-color:white;
+
+}
+
+
+
+#pbtm{
+
+    height: calc(100% - 100px); /* In order to calculate % with px */
+    width: 100%;
+    padding:10px;
+    gap:10px;
+    display:flex;
+    flex-wrap:wrap; /* It use if the object can't fit in one line it move the  content to the next line*/
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    font-weight:600px;
+    font-size:80px;
+       
+}
+
+.bubble{
+    height:70px;
+    width:70px;
+    border-radius:50%;
+    /* border: 1px solid black; */
+    background-color:rgb(224, 240, 240);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:600px;
+    font-size:18px;
+
+    margin:8px 8px;
+
+}
+
+.bubble:hover{
+    cursor:pointer;
+}
+
+.btn:hover{
+    cursor:pointer;
+}
+
+.btn{
+    /*For Start_Button*/
+    height:50px;
+    width:120px;
+    background-color: lightblue;
+    border-radius:15px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    position:absolute;
+    top:20px;
+    right:80px;
+    
+    font-weight:600;
+    font-size:20px;
+    
+}
