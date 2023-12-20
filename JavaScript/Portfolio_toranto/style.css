@@ -1,0 +1,294 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: "General Sans";
+  color:white;
+  background-color: #000;
+  /* scroll-behavior: smooth; */
+}
+
+a{
+    cursor:pointer;
+}
+
+html,body{
+  width: 100%;
+  height: 100%;
+}
+
+#mainDiv{
+    height:100%;
+    width:100%;
+}
+
+
+#heroHome{
+    height:100vh;
+    width:100%;
+    position:relative;
+}
+
+#nav{
+    height:30px;
+    width:100%;
+    padding: 3rem 2vw;
+    /* position:sticky;
+    z-index:10;
+    top:0; */
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    /* position:fixed;
+    top:0;
+    left:0;
+    z-index:999; */
+
+
+
+    font-weight:500;
+    font-size:1.5rem;
+}
+
+#nav a{
+    text-decoration:none;
+}
+
+#heading{
+    height:30vh;
+    width:100%;
+    padding: 0 50px;
+}
+
+
+
+#heading h1{
+    font-family: "General Sans";
+    font-size:10vw;
+    opacity: .65;
+    text-transform:uppercase;
+    margin-left:20px;
+    padding:5px 5px;
+    line-height: .8;
+    letter-spacing: 4px;
+
+}
+
+#heading{
+    margin: 8px 8px;
+}
+
+#heading .badiHeading{
+    margin-left: 200px;
+}
+
+#heading .chotiHeading{
+    text-align:right;
+    font-weight:450;
+}
+
+.headingTop{
+    width:fit-content;
+    margin-bottom:170px;
+}
+
+.centerHeading div{
+    padding:4px 4px;
+    margin-right:15px;
+    text-align:right;
+    font-size:14px;
+    font-weight:560;
+    text-transform:uppercase;
+}
+
+#heroFooter{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:absolute;
+    bottom:0px;
+    text-transform:uppercase;
+    padding:20px;
+
+}
+
+#heroFooter a{
+    text-decoration:none;
+    font-size:15px;    
+}
+
+#heroFooter .twinIcon{
+    display:flex;
+}
+
+#heroFooter .twinIcon .icon{
+    height:25px;
+    width:25px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    border: 1px solid white;
+    /* margin:3px 5px; */
+
+}
+
+/* -----------------------SECOND-page---------------- */
+
+#intro{
+    padding-top: 185px;
+    height:100vh;
+    width:100%;
+    margin-bottom:40px;
+}
+#box{
+    height:fit-content;
+    width:89%;
+    padding:20px 5px;
+    text-transform:uppercase;
+    /* display:flex; */
+    
+}
+
+.firstElem{
+    margin-top:20px;
+}
+
+.elem{
+    width:100%;
+    background-color:black;
+    border-top:2px solid white;
+    padding: 3px 5px;
+    
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    position:relative;
+    overflow:hidden;
+}
+
+.lastElem{
+    border-bottom:2px solid white;
+}
+
+.elem h1{
+    opacity:.8;
+    font-size: 8rem;
+}
+
+.elem img{
+    height:200px;
+    width:180px;
+    position:absolute;
+    /* display:none; */
+    /* z-index: 998; */
+}
+
+#about{
+    /* height:100vh; */
+    width:100%;
+    position:relative;
+    /* background-color:black; */
+}
+
+.aboutBox{
+    height:100vh;
+    width:100%;
+}
+
+.aboutBox1{
+    display:flex;
+    align-items:flex-start; /* So that the content always remain at stat of the div */
+    justify-content:end; /* It remains at the end of the div */
+    margin-left:50em;
+    padding:80px 20px;
+    gap:40px; /*It is used to give the space among the children elements */
+
+}
+
+.aboutDiscription h5{
+    opacity:.7;
+    margin: 4px 0;
+} 
+
+.aboutDiscription .para{
+    font-weight:400;
+    margin-bottom:30px;
+    text-align:left;
+}
+
+.aboutDiscription .mail{
+    border:1px solid white;
+    text-decoration:none;
+    border-radius:50px;
+    padding:7px;
+    font-size:14px;
+    font-weight:380;
+    text-align:center;
+}
+.aboutImage{
+    height:320px;
+    width:320xp;
+}
+
+.aboutBox2{
+    padding: 80px 25px;
+    line-height:20px;
+    margin-bottom:80px;
+}
+
+.aboutBox2 .forgot{
+    opacity:.7;
+    text-transform:uppercase;
+    font-size:12px;
+    font-weight:500;
+}
+
+.aboutBox2 .youtubeLink{
+    text-transform:uppercase;
+    text-decoration:none;
+    font-size:13px;
+    font-weight:600;
+    opacity:.9;
+}
+
+#footer{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    font-weight:600;
+    text-transform:uppercase;
+    padding-bottom:18x;
+}
+
+#footer .left{
+    display:flex;
+    align-items:center;
+    bottom:0px;
+    gap:20px;
+    padding:4px 8px;
+}
+
+#footer .right{
+    display:flex;
+    gap:40px;
+    padding:4px 4px;
+    padding-right:20px;
+}
+
+#footer .right a{
+    font-size:14px;
+    text-decoration:none;
+}
+
+
+
+
+
+
+
+
+
+
