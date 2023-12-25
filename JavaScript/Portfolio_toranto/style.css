@@ -17,6 +17,22 @@ html,body{
   height: 100%;
 }
 
+#miniCircle{
+    transition:cubic-bezier(0.19, 1, 0.22, 1) .25s;
+    height:9.8px;
+    width:9.8px;
+    border-radius:50%;
+    position:absolute;
+    z-index: 9999;
+    /* border:1px solid white; */
+    background-color:white;
+
+}
+
+/* ------------------------------------First-Page-----------------------*/
+
+
+
 #mainDiv{
     height:100%;
     width:100%;
@@ -52,6 +68,17 @@ html,body{
 
 #nav a{
     text-decoration:none;
+}
+
+.bounding{
+    /* background-color:red; */
+    overflow:hidden;
+}
+
+.boundingElem{
+    
+    transform: translateY(100%);
+
 }
 
 #heading{
@@ -109,7 +136,7 @@ html,body{
     position:absolute;
     bottom:0px;
     text-transform:uppercase;
-    padding:20px;
+    padding:30px;
 
 }
 
@@ -137,53 +164,52 @@ html,body{
 /* -----------------------SECOND-page---------------- */
 
 #intro{
-    padding-top: 185px;
+    padding-top: 180px;
     height:100vh;
     width:100%;
     margin-bottom:40px;
 }
-#box{
-    height:fit-content;
-    width:89%;
-    padding:20px 5px;
-    text-transform:uppercase;
-    /* display:flex; */
-    
-}
+
 
 .firstElem{
-    margin-top:20px;
+    margin-top:15px;
+}
+
+#box{
+    padding: 20px 2rem;
+    padding-right: 10rem;
+    
+    
 }
 
 .elem{
     width:100%;
     background-color:black;
-    border-top:2px solid white;
-    padding: 3px 5px;
-    
+    border-top:1px solid white;
+    padding: 4px 13px;
     display:flex;
     align-items:center;
     justify-content:space-between;
-
     position:relative;
-    overflow:hidden;
+    object-fit: contain;
+    /* overflow:hidden; */
 }
 
 .lastElem{
-    border-bottom:2px solid white;
+    border-bottom:1px solid white;
 }
 
 .elem h1{
     opacity:.8;
-    font-size: 8rem;
+    font-size: 8.5rem;
 }
 
 .elem img{
-    height:200px;
-    width:180px;
+    height:340px;
     position:absolute;
-    /* display:none; */
-    /* z-index: 998; */
+    opacity:0;
+    z-index: 998;
+    /* width:420px; */
 }
 
 #about{
@@ -202,24 +228,40 @@ html,body{
     display:flex;
     align-items:flex-start; /* So that the content always remain at stat of the div */
     justify-content:end; /* It remains at the end of the div */
-    margin-left:50em;
+    margin-left:55em;
     padding:80px 20px;
     gap:40px; /*It is used to give the space among the children elements */
+
+} 
+.aboutDiscription{
+    margin-right:12rem;
 
 }
 
 .aboutDiscription h5{
     opacity:.7;
     margin: 4px 0;
+    padding: 6px 8px;
+
 } 
 
 .aboutDiscription .para{
     font-weight:400;
-    margin-bottom:30px;
+    padding: 6px 8px;
     text-align:left;
+    padding-bottom:14px;
 }
 
 .aboutDiscription .mail{
+    
+    display:flex;
+    left:4px;
+    align-items:center;
+
+}
+
+
+.aboutDiscription a{
     border:1px solid white;
     text-decoration:none;
     border-radius:50px;
@@ -227,10 +269,12 @@ html,body{
     font-size:14px;
     font-weight:380;
     text-align:center;
+    width:fit-content;
 }
+
 .aboutImage{
-    height:320px;
-    width:320xp;
+    height:15rem;
+    width:15rem;
 }
 
 .aboutBox2{
