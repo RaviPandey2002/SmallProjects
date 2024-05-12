@@ -1,0 +1,38 @@
+  function giveAName() {
+    var names = ["Ravii", "Ayush", "dogra", "godara"];
+    let val = Math.floor(Math.random() * 4);
+    return names[val];
+  }
+          <p>Hello {giveAName()}</p>
+
+
+import React from "react";
+import { useState } from 'react'
+
+const Content = () => {
+    const [name, setName] = useState("");
+    
+    function giveAName() {
+        var names = ["Ravii", "Ayush", "dogra", "godara"];
+        let val = Math.floor(Math.random() * 4);
+        setName(names[val]);
+      }
+      
+    return (
+    <main>
+      <p>Hello {name}</p>
+      <button onClick = {()=>{ console.log(`${name} clicked!` ) }}>
+        click Here!
+      </button>
+      <button onClick = {giveAName} >
+        Change Name
+      </button>
+      <button onClick = {console.clear}>
+        clear console!!
+      </button>
+    </main>
+  );
+};
+
+export default Content;
+          
