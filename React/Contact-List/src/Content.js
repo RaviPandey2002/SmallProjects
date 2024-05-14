@@ -3,9 +3,10 @@ import ItemList from "./ItemList"
 
 const Content = ({ items, handleClick, handleDelete }) => {
   return (
-    <main>
+    <>
       {items.length ? (
           <ItemList 
+              
               items={items}
               handleClick={handleClick}
               handleDelete={handleDelete}
@@ -16,7 +17,7 @@ const Content = ({ items, handleClick, handleDelete }) => {
         </p>
       )}
 
-    </main>
+    </>
   );
 };
 
