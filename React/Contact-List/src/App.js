@@ -34,35 +34,45 @@ function App() {
     }, 2000);
   }, []);
 
-  const addNewItem = async (itemName) => {
-    const id = items.length ? Number(items[items.length - 1].id) + 1 : 1;
-
-    const newItem = { id, checked: false, item: itemName };
+  const addNewItem = async (item) => {
+    const id = items.length ? items[items.length - 1].id + 1 : 1;
+    const newItem = { id, checked: false, item: item };
     const newItemList = [...items, newItem];
     setItems(newItemList);
 
     const postOptions = {
-      method: "POST",
+      method: 'POST',
       headers: {
-        "content-type": "application/json",
+        'content-type': 'application/json',
       },
       body: JSON.stringify(newItem),
     };
-
     const result = await apiRequest(API_URL, postOptions);
     if (result) setFetchError(result);
   };
 
-  const handleClick = async (id) => {
+  const handleDelete = async (id) => {
+    const newItemList = items.filter((item) => item.id !== id);
+    setItems(newItemList)
+
+    const deleteOptions = { method: "DELETE" };
+    const reqURL = `${API_URL}/${id}`;
+    const response = await apiRequest(reqURL, deleteOptions);
+
+
+    if (response) setFetchError(response);
+  };
+
+  const handleCheck = async (id) => {
     const newItemList = items.map((item) =>
       item.id === id ? { ...item, checked: !item.checked } : item
     );
     const myItem = newItemList.filter((item) => item.id === id);
     setItems(newItemList);
-
+    
     const updateOptions = {
       method: "PATCH",
-      header: {
+      headers: {
         "content-type": "application/json",
       },
       body: JSON.stringify({ checked: myItem[0].checked }),
@@ -72,18 +82,9 @@ function App() {
     if (response) setFetchError(response);
   };
 
-  const handleDelete = async (id) => {
-    const newItemList = items.filter((item) => item.id !== id);
-    setItems(newItemList);
-    const deleteObject = {
-      method: "DELETE"
-    };
-    const reqURL = `${API_URL}/${id}`;
-    const response = await apiRequest(reqURL, deleteObject);
-    if (response) setFetchError(response);
-  };
 
   const handleSubmit = (e) => {
+
     e.preventDefault();
     if (!newItem) return;
     addNewItem(newItem);
@@ -107,7 +108,7 @@ function App() {
             items={items.filter((item) =>
               item.item.toLowerCase().includes(search.toLowerCase())
             )}
-            handleClick={handleClick}
+            handleCheck={handleCheck}
             handleDelete={handleDelete}
           />
         )}

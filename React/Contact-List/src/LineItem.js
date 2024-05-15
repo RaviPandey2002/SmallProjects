@@ -1,18 +1,18 @@
 import React from "react";
 
-const LineItem = ({ item, handleClick, handleDelete }) => {
+const LineItem = ({ item, handleCheck, handleDelete }) => {
   return (
     <li className="item">
       <input
         type="checkbox"
         onChange={() => {
-          handleClick(item.id);
+          handleCheck(item.id);
         }}
         checked={item.checked}
       />
       <label 
         style={ (item.checked) ? {textDecoration:'line-through'}: null }
-      onDoubleClick={() => handleClick(item.id)}>{item.item}</label>
+      onDoubleClick={() => handleCheck(item.id)}>{item.item}</label>
       <button
         onClick={() => {
           handleDelete(item.id);
