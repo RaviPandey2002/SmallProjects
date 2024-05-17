@@ -1,0 +1,25 @@
+.NavBar {
+  height: 50px;
+  padding: 2px 2px;
+  font-size: 1.6rem;
+  display: flex;
+}
+
+.b1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 33%;
+}
+.b2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 33%;
+}
+.b3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 33%;
+}
